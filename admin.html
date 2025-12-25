@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — Bagara Buvva Kodi Kura</title>
+  <link rel="stylesheet" href="admin-styles.css" />
+</head>
+<body>
+  <div id="app" class="app">
+
+    <!-- Simple header -->
+    <header class="admin-header">
+      <div class="container">
+        <div class="brand">
+           <img src="logo.png" alt="Bagara Buvva Kodi Kura Logo" class="logo" />
+          <div>
+            <div class="title">Bagara Buvva Kodi Kura — Admin</div>
+            <div class="subtitle">Manage branches, menus & galleries</div>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button id="btnExport" class="btn">Export JSON</button>
+          <input id="importFile" type="file" accept="application/json" style="display:none" />
+          <button id="btnImport" class="btn ghost">Import JSON</button>
+          <button id="btnLogout" class="btn danger">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Login overlay (simple client-side gate) -->
+    <div id="login" class="login-overlay" aria-hidden="true">
+      <form id="loginForm" class="login-card" aria-label="Admin login">
+        <h2>Admin Login</h2>
+        <label for="pwd">Password</label>
+        <input id="pwd" name="pwd" type="password" placeholder="admin password" required />
+        <div class="login-actions">
+          <button type="submit" class="btn primary">Sign in</button>
+         
+        </div>
+        <small class="muted">This is a client-side demo login. Replace with real auth in production.</small>
+      </form>
+    </div>
+
+    <!-- Main admin UI -->
+    <main id="mainUI" class="container main-ui" hidden>
+
+      <aside class="sidebar" aria-label="Branches list">
+        <div class="sidebar-actions">
+          <input id="branchFilter" type="search" placeholder="Search branches..." />
+          <button id="btnAddBranch" class="btn">+ Add branch</button>
+        </div>
+
+        <ul id="branchList" class="branch-list" role="list"></ul>
+      </aside>
+
+      <section class="panel" aria-live="polite">
+        <div class="panel-header">
+          <h2 id="panelTitle">Select a branch</h2>
+          <div class="panel-actions">
+            <button id="btnSave" class="btn primary">Save (local)</button>
+            <button id="btnReset" class="btn ghost">Reset to demo</button>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <button class="tab active" data-tab="details">Details</button>
+          <button class="tab" data-tab="menu">Menu</button>
+          <button class="tab" data-tab="gallery">Gallery</button>
+        </div>
+
+        <div id="tabContents" class="tab-contents">
+          <!-- Details tab -->
+          <div class="tab-pane" data-pane="details">
+            <form id="detailsForm" class="details-form">
+              <label>Branch Name<input name="name" required /></label>
+              <label>Slug (url-friendly)<input name="slug" required pattern="[a-z0-9-]+" title="Lowercase letters, numbers and hyphens only" /></label>
+              <label>Address<textarea name="address" rows="2"></textarea></label>
+              <label>Phone<input name="phone" /></label>
+              <label>Email<input name="email" type="email" /></label>
+              <label>Google Maps Embed URL<input name="map" placeholder="https://www.google.com/maps/embed?..." /></label>
+              <label>Opening Hours<textarea name="hours" rows="3" placeholder="Mon-Fri: 11:00-23:00\nSat: 11:00-23:30"></textarea></label>
+              <label>About (branch-specific)<textarea name="about" rows="4"></textarea></label>
+              <div class="form-row">
+                <button id="btnUpdateDetails" class="btn primary">Update Details</button>
+                <button id="btnDeleteBranch" class="btn danger">Delete Branch</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Menu tab -->
+          <div class="tab-pane" data-pane="menu" hidden>
+            <div class="menu-controls">
+              <label>Category<select id="menuCategory">
+                <option value="starters">Starters</option>
+                <option value="mains">Mains</option>
+                <option value="rice">Rice & Biryani</option>
+                <option value="sides">Sides</option>
+                <option value="desserts">Desserts</option>
+              </select></label>
+
+              <label>Item name<input id="menuName" /></label>
+              <label>Price<input id="menuPrice" type="number" min="0" /></label>
+              <label>Description<input id="menuDesc" /></label>
+              <div class="menu-actions">
+                <button id="btnAddMenu" class="btn primary">Add Item</button>
+                <button id="btnClearMenu" class="btn ghost">Clear Fields</button>
+              </div>
+            </div>
+
+            <div class="menu-list-wrap">
+              <h3>Menu Items</h3>
+              <ul id="menuList" class="admin-menu-list"></ul>
+            </div>
+          </div>
+
+          <!-- Gallery tab -->
+          <div class="tab-pane" data-pane="gallery" hidden>
+            <div class="gallery-controls">
+              <label class="file-pill">
+                Upload photos
+                <input id="galleryUpload" type="file" accept="image/*" multiple />
+              </label>
+              <div class="gallery-help muted">Images are stored in localStorage as Data URLs for demo. For production, upload to server or S3 and store references.</div>
+            </div>
+
+            <div id="galleryGrid" class="admin-gallery-grid"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- simple toast -->
+    <div id="toast" class="toast" aria-hidden="true"></div>
+
+    <footer class="admin-footer">
+      <div class="container">
+        <small class="muted">Admin demo • Local changes are stored in your browser only. Replace localStorage calls with API requests in production.</small>
+      </div>
+    </footer>
+  </div>
+
+  <script src="admin-scripts.js" defer></script>
+</body>
+</html>

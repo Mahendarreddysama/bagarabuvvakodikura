@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bagara Buvva Kodi Kura — Narapally</title>
+  <meta name="description" content="Bagara Buvva Kodi Kura — Narapally branch. View menu, gallery, contact and book a table." />
+  <link rel="stylesheet" href="branch-styles.css" />
+</head>
+<body>
+  <header class="bh-header">
+    <div class="container">
+      <a class="brand" href="/">
+         <img src="logo.png" alt="Bagara Buvva Kodi Kura Logo" class="logo" />
+        <div class="brand-text"><strong>Bagara Buvva Kodi Kura</strong><small>Narapally</small></div></a>
+      <nav class="top-nav" aria-label="Main">
+        <a href="index.html">Corporate Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="admin.html" class="admin">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <!-- Branch Hero -->
+    <section class="hero branch-hero" aria-labelledby="bh-hero-title">
+      <div class="hero-left">
+        <h1 id="bh-hero-title">Welcome to <span>Bagara Buvva Kodi Kura— Narapally</span></h1>
+        <p class="muted">Premium family dining with authentic Telangana flavors. Branch-specific offers & events.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#menu">View Menu</a>
+          <a class="btn ghost" href="#contact">Contact / Directions</a>
+          <a class="btn accent" href="#reservations">Reserve a Table</a>
+        </div>
+        <div class="offer">Today's Special: <strong>Bagara Buvva Natukodi Kura - ₹250 </strong></div>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <img src="images/Bagara Buvva with kodu kura.jpg" alt="Narapally signature dish">
+      </div>
+    </section>
+
+    <!-- Branch About -->
+    <section id="about" class="branch-about">
+      <h2>About this branch</h2>
+      <p class="muted">Located in the heart of Hyderabad, our branch blends a warm neighborhood vibe with elevated plating and attentive service. Local manager <strong>Sukumar Reddy</strong> ensures freshness every day.</p>
+      <div class="about-grid">
+        <div>
+          <h3>Manager</h3>
+          <p>Sukumar Reddy</p>
+        </div>
+        <div>
+          <h3>Seating</h3>
+          <p>Dine-in (70 seats), Private dining room available on request</p>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <p>Dine-in · Takeaway · Catering · Corporate orders</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="branch-menu" aria-labelledby="menu-heading">
+      <div class="menu-header">
+        <h2 id="menu-heading">Narapally — Menu</h2>
+        <div class="menu-controls">
+          <label for="categoryFilter" class="visually-hidden">Filter by category</label>
+          <select id="categoryFilter" aria-label="Filter menu by category">
+            <option value="all">All categories</option>
+            <option value="Main Course">Main Course</option>
+            <option value="Combos">Combos</option>
+            <option value="Bagara Buvva special">Bagara Buvva special</option>
+            <option value="Curries">Curries</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="desserts">Desserts</option>
+            
+          </select>
+
+          <label for="menuSearch" class="visually-hidden">Search menu</label>
+          <input id="menuSearch" type="search" placeholder="Search menu (name or description)" aria-label="Search menu">
+        </div>
+      </div>
+
+      <div id="menuList" class="menu-list" aria-live="polite">
+        <!-- Category: Main Course -->
+        <div class="menu-category" data-category="starters">
+          <h3 class="cat-title">Main Course</h3>
+          <ul>
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Kodi Kura</strong>
+              </div>
+              <div class="mi-right">₹180</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Natukodi Kura</strong>
+              </div>
+              <div class="mi-right">₹250</div>
+            </li>
+
+             <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Mutton Kura</strong>
+              </div>
+              <div class="mi-right">₹290</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Boti Kura</strong>
+              </div>
+              <div class="mi-right">₹190</div>
+            </li>
+
+             <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Talakaya Kura</strong>
+              </div>
+              <div class="mi-right">₹210</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Chepala Puslusu</strong>
+              </div>
+              <div class="mi-right">₹180</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Egg Puslusu</strong>
+              </div>
+              <div class="mi-right">₹140</div>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- Combos -->
+        <div class="menu-category" data-category="mains">
+          <h3 class="cat-title">Combos</h3>
+          <ul>
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Kodi Kura + Mutton</strong>
+              </div>
+              <div class="mi-right">₹380</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Kodi Kura + Natukodi</strong>
+              </div>
+              <div class="mi-right">₹340</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Kodi Fry + Mutton</strong>
+              </div>
+              <div class="mi-right">₹400</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Kodi Fry + Natukodi</strong>
+              </div>
+              <div class="mi-right">₹360</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Mutton + Natukodi</strong>
+              </div>
+              <div class="mi-right">₹520</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Kodi Kura + Boti</strong>
+              </div>
+              <div class="mi-right">₹280</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Kodi Kura + Talakaya</strong>
+              </div>
+              <div class="mi-right">₹300</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Kodi Fry + Boti</strong>
+              </div>
+              <div class="mi-right">₹300</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Kodi Fry + Talakaya</strong>
+              </div>
+              <div class="mi-right">₹320</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Kodi Kura + Kamjupitta</strong>
+              </div>
+              <div class="mi-right">₹350</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Bagara Buvva Kodi Fry + Kamjupitta</strong>
+              </div>
+              <div class="mi-right">₹370</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bagara Buvva Special -->
+        <div class="menu-category" data-category="rice">
+          <h3 class="cat-title">Bagara Buvva Special</h3>
+          <ul>
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Chicken Fry Piece Bagara</strong>
+              </div>
+              <div class="mi-right">₹220</div>
+            </li>
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Chicken Joint Piece Bagara</strong>
+              </div>
+              <div class="mi-right">₹240</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left">
+                <strong class="mi-name">Kamjupitta Fry Piece Bagara</strong>
+              </div>
+              <div class="mi-right">₹250</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Curries -->
+        <div class="menu-category" data-category="sides">
+          <h3 class="cat-title">Curries</h3>
+          <ul>
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Kodi Kura</strong>
+              </div>
+              <div class="mi-right">₹120</div>
+            </li>
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Kodi Fry</strong>
+              </div>
+              <div class="mi-right">₹140</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Mutton</strong>
+              </div>
+              <div class="mi-right">₹230</div>
+            </li>
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Natukodi</strong>
+              </div>
+              <div class="mi-right">₹180</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Kamju Pitta</strong>
+              </div>
+              <div class="mi-right">₹180</div>
+            </li>
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Boti</strong>
+              </div>
+              <div class="mi-right">₹120</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Talakaya</strong>
+              </div>
+              <div class="mi-right">₹150</div>
+            </li>
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Chepala Pulusu</strong>
+              </div>
+              <div class="mi-right">₹100</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Chicken Joint</strong>
+              </div>
+              <div class="mi-right">₹160</div>
+            </li>
+          </ul>
+        </div>
+
+      <!-- Vegetarian -->
+        <div class="menu-category" data-category="sides">
+          <h3 class="cat-title">Vegetarian</h3>
+          <ul>
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Bagara Buvva Gutti Vankaya Masala</strong>
+              </div>
+              <div class="mi-right">₹130</div>
+            </li>
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Bagara Rice</strong>
+              </div>
+              <div class="mi-right">₹100</div>
+            </li>
+
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Veg Meals</strong>
+              </div>
+              <div class="mi-right">₹120</div>
+            </li>
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Bagara Paneer Masala</strong>
+              </div>
+              <div class="mi-right">₹180</div>
+            </li>
+             </ul>
+        </div>
+
+
+        <!-- Desserts -->
+        <div class="menu-category" data-category="desserts">
+          <h3 class="cat-title">Desserts</h3>
+          <ul>
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Pot Junnu</strong>
+              </div>
+              <div class="mi-right">₹80</div>
+            </li>
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Apricot Delight</strong>
+              </div>
+              <div class="mi-right">₹140</div>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- Drinks -->
+        <div class="menu-category" data-category="desserts">
+          <h3 class="cat-title">Drinks</h3>
+          <ul>
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Soft Drinks</strong>
+              </div>
+              <div class="mi-right">₹20</div>
+            </li>
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Water Bottles</strong>
+              </div>
+              <div class="mi-right">₹20</div>
+            </li>
+            <li class="menu-item">
+              <div class="mi-left"><strong class="mi-name">Goli Soda</strong>
+              </div>
+              <div class="mi-right">₹40</div>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="branch-gallery">
+      <h2>Gallery</h2>
+      <p class="muted">Photos from Narapally — food, interior and events.</p>
+      <div class="gallery-grid" id="galleryGrid">
+        <button class="gcell" data-src="images/narapally/narapally-branch.webp" aria-label="Open image 1">
+          <img src="images/narapally/narapally-branch.webp" alt="branch"></button>
+        <button class="gcell" data-src="images/narapally/narapally.webp" aria-label="Open image 2">
+          <img src="images/narapally/narapally.webp" alt="narapally"></button>
+        <button class="gcell" data-src="images/Chicken Fry with Bagara.jpg" aria-label="Open image 3">
+          <img src="images/Chicken Fry with Bagara.jpg" alt="Chicken fry"></button>
+        <button class="gcell" data-src="images/Bagara Buvva with mutton curry.jpg" aria-label="Open image 4">
+          <img src="images/Bagara Buvva with mutton curry.jpg" alt="Dessert"></button>          
+</div>
+    </section>
+         
+    <!-- Reservations -->
+    <section id="reservations" class="branch-reservations">
+      <h2>Reserve a Table</h2>
+      <p class="muted">Reserve online — we will hold your table for 15 minutes after your booking time.</p>
+      <form id="reservationForm" class="res-form" aria-describedby="resNote" novalidate action="https://formspree.io/f/xzzkjyle" method="POST">
+        <div class="form-row">
+          <label for="resName">Name</label>
+          <input id="resName" name="name" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="resPhone">Phone</label>
+          <input id="resPhone" name="phone" type="tel" required pattern="[0-9]{10}" placeholder="10 digits">
+        </div> 
+        <div class="form-row">
+          <label for="resEmail">Email</label>
+          <input id="resEmail" name="Email" type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-row">
+          <label for="resDate">Date</label>
+          <input id="resDate" name="date" type="date" required>
+        </div>
+        <div class="form-row">
+          <label for="resTime">Time</label>
+          <input id="resTime" name="time" type="time" required>
+        </div>
+        <div class="form-row">
+          <label for="resGuests">Guests</label>
+          <input id="resGuests" name="guests" type="number" min="1" max="20" value="2" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn accent">Request Reservation</button>
+          <a class="btn ghost" href="#contact">Contact Branch</a>
+        </div>
+        <p id="resNote" class="muted small">We will confirm your reservation by phone. For urgent bookings, call the branch directly.</p>
+      </form>
+    </section> 
+
+    <!-- Contact -->
+    <section id="contact" class="branch-contact">
+      <h2>Contact & Location</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Address</h3>
+          <p>2-96/60 beside MJR square mall,Narapally, Pocharam, Hyderabad, Telangana 500088</p>
+
+          <h3>Phone</h3>
+          <p><a href="tel:+918919011512">+91 8919011512</a></p>
+
+          <h3>Email</h3>
+          <p><a href="mailto:narapally@bagarabuvva.com">narapally@bagarabuvva.com</a></p>
+
+          <h3>Opening Hours</h3>
+          <table class="hours">
+            <tr><td>Mon – Fri</td><td>11:00 – 23:30</td></tr>
+            <tr><td>Sat</td><td>11:00 – 23:30</td></tr>
+            <tr><td>Sun</td><td>11:00 – 23:30</td></tr>
+          </table>
+
+          <div class="contact-actions">
+            <a class="btn" href="https://www.google.com/maps/dir//2-96%2F60+beside+MJR+square+mall,Narapally,+Pocharam,+Hyderabad,+Telangana+500088/@17.4522368,78.3679488,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bcb9fa622767d2b:0x48da40f57b511475!2m2!1d78.6377342!2d17.4210965?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferer">Open in Google Maps</a>
+            <a class="btn ghost" href="https://www.google.com/search?q=bagara+buvva+kodi+kura+narapally&oq=bagara&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIGCAEQRRg7Mg4IAhBFGCcYOxiABBiKBTIGCAMQRRg5MgYIBBBFGEAyBggFEEUYPTIGCAYQRRg8MgYIBxBFGDzSAQg0NjIwajBqN6gCCLACAfEFdiPIJby62OvxBXYjyCW8utjr&sourceid=chrome&ie=UTF-8">Order Online</a>
+          </div>
+        </div>
+ 
+        <div class="map-card" aria-hidden="false">
+          <!-- Replace src with actual Google Maps embed for production -->
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.402995071618!2d78.63627921778001!3d17.421095841145995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9fa622767d2b%3A0x48da40f57b511475!2sBAGARA%20BUVVA%20KODI%20KURA!5e0!3m2!1sen!2sin!4v1762089491274!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section> 
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Copyright © 2025 Bagara Buvva Kodi Kura - Narapally | Privacy Policy | Terms & Conditions | Website created by Mahendar Reddy Sama
+        <a href="admin.html">Admin</a></small>
+    </div>
+  </footer>
+
+  <!-- Image lightbox modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lbClose" class="lb-close" aria-label="Close image">✕</button>
+    <img id="lbImg" alt="Expanded gallery image">
+    <div id="lbCaption" class="lb-caption" aria-hidden="true"></div>
+  </div>
+
+  <a class="whatsapp-fab" href="https://wa.me/918919011512" target="_blank" aria-label="WhatsApp">
+    💬
+  </a>
+
+
+  <script src="branch-scripts.js" defer></script>
+</body>
+</html>

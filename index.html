@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bagara Buvva Kodi Kura | Official Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <img src="logo.png" alt="Bagara Buvva Kodi Kura Logo" class="logo" />
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#branches">Branches</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="admin.html" class="admin-link">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to <span>Bagara Buvva Kodi Kura</span></h1>
+      <p>Experience the authentic taste of Telangana favorite chicken delicacy across Hyderabad.</p>
+      <a href="#branches" class="btn-primary">Find Our Branches</a>
+    </div>
+    <div class="hero-image">
+      <img src="images/narapally/chickenfry.webp" alt="Delicious Telangana Food" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        Bagara Buvva Kodi Kura is a renowned restaurant group bringing the rich flavors of Telangana cuisine to life. 
+        With multiple vibrant branches across Hyderabad, we serve love, spice, and authenticity in every bite.
+      </p>
+    </div>
+  </section>
+
+  <!-- Branches Section -->
+  <section id="branches" class="branches">
+    <div class="container">
+      <h2>Our Branches</h2>
+      <div class="branch-grid"> 
+        <div class="branch-card" onclick="goToBranch('Narapally')">
+            <a href="Narapally.html">
+          <img src="images/Bagara Buvva with kodu kura.jpg" alt="Narapally Branch" />
+          <h3>Narapally</h3>
+          <p>Heart of Hyderabad with a premium dining experience.</p> </a>
+        </div>
+        <div class="branch-card" onclick="goToBranch('Uppal-Bhagayath')">
+            <a href="Uppal-bhagayath.html">
+          <img src="images/narapally/chicken.webp" alt="Uppal-Bhagayath Branch" />
+          <h3>Uppal-Bhagayath</h3>
+          <p>Perfect for family dining with our signature dishes.</p></a>
+        </div>
+        <div class="branch-card" onclick="goToBranch('Shadhnagar')">
+            <a href="Shadhnagar.html">
+          <img src="images/narapally/bagara-kodi-kura.webp" alt="Shadhnagar Branch" />
+          <h3>Shadhnagar</h3>
+          <p>Modern ambiance meets traditional flavors.</p> </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>Global Gallery</h2>
+      <div class="gallery-grid">
+        <img src="images/Bagara Buvva kodi Fry and Boti curry.jpg" alt="boti curry" /> 
+         <img src="images/Bagara Buvva kodi Fry and Kamju pitta.jpg" alt="kamju pitta" />    
+        <img src="images/narapally/narapally-branch.webp" alt="narapally-branch" />
+         <img src="images/uppal/chicken-bowl.webp" alt="chicken-bowl" />
+        <img src="images/uppal/chicken-gravy.webp" alt="chicken-gravy" />   
+        <img src="images/Bagara Buvva kodi fry and mutton curry.jpg" alt="mutton curry" /> 
+        <img src="images/Bagara Buvva kodi Fry and natukodi.jpg" alt="natukodi" />
+        <img src="images/Bagara Buvva kodi Fry and Talakaya kura.jpg" alt="talakaya kura" />
+        <img src="images/Bagara Buvva kodi kura and Boti curry.jpg" alt="boti" />   
+        <img src="images/Bagara Buvva with Boti Fry.jpg" alt="boti fry" /> 
+        <img src="images/Bagara Buvva with chepala pulusu.jpg" alt="chepala pulusu" />
+         <img src="images/Bagara Buvva with gutti vankaya masala.jpg" alt="vankaya masala" />
+        <img src="images/Bagara Buvva with panner Masala.jpg" alt="paneer masala" />   
+        <img src="images/Bagara Buvva with Natukodi kura.jpg" alt="natukodi" /> 
+        <img src="images/Bagara Buvva with mutton curry.jpg" alt="mutton" />
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Whether you’re a customer, a franchise partner, or just exploring, feel free to reach out.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><strong>Phone:</strong> +91 8919011512</p>
+          <p><strong>Email:</strong> bagarabuvvakodikura2025@gmail.com</p>
+          <p><strong>Franchise:</strong> bagarabuvvakodikura2025@gmail.com</p>
+        </div>
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/xgvprrlw" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Copyright © 2025 Bagara Buvva Kodi Kura | Privacy Policy | Terms & Conditions | Website created by Mahendar Reddy Sama</p>
+  </footer>
+  <a class="whatsapp-fab" href="https://wa.me/918919011512" target="_blank" aria-label="WhatsApp">
+    💬
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

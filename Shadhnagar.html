@@ -9,19 +9,39 @@
 </head>
 <body>
   <header class="bh-header">
-    <div class="container">
-      <a class="brand" href="/">
-         <img src="logo.png" alt="Bagara Buvva Kodi Kura Logo" class="logo" />
-        <div class="brand-text"><strong>Bagara Buvva Kodi Kura</strong><small>Shadhnagar</small></div></a>
-      <nav class="top-nav" aria-label="Main">
-        <a href="index.html">Corporate Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-        <a href="admin.html" class="admin">Admin</a>
-      </nav>
-    </div>
-  </header>
+  <div class="container header-inner">
+
+    <!-- Brand -->
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="Bagara Buvva Kodi Kura Logo" class="logo" />
+      <div class="brand-text">
+        <strong>Bagara Buvva Kodi Kura</strong>
+        <small>Shadhnagar</small>
+      </div>
+    </a>
+
+    <!-- Hamburger -->
+    <button
+      id="navToggle"
+      class="nav-toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="mainNav">
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="top-nav" aria-label="Main navigation">
+      <a href="index.html">Corporate Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="admin.html" class="admin">Admin</a>
+    </nav>
+
+  </div>
+</header>
+
 
   <main class="container">
     <section class="hero branch-hero" aria-labelledby="hero-title">

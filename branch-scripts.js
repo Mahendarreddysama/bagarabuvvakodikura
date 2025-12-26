@@ -1,4 +1,38 @@
 // branch-scripts.js
+
+// =====================
+// MOBILE NAV TOGGLE
+// =====================
+const navToggle = document.getElementById("navToggle");
+const mainNav = document.getElementById("mainNav");
+
+if (navToggle && mainNav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("show");
+    navToggle.setAttribute("aria-expanded", isOpen);
+  });
+
+  // Close menu when clicking a link (mobile)
+  mainNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mainNav.classList.remove("show");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      !mainNav.contains(e.target) &&
+      !navToggle.contains(e.target)
+    ) {
+      mainNav.classList.remove("show");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
   // MENU: filter by category and search
   const category = document.getElementById('categoryFilter');

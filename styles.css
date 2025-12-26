@@ -1,47 +1,104 @@
-* {
-  box-sizing: border-box;
+/* ================= RESET ================= */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
   color: #222;
   background-color: #fff;
-  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Header */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* ================= LAYOUT ================= */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+section {
+  padding: 60px 0;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+
+/* ================= LAYOUT ================= */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+section {
+  padding: 60px 0;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+
+/* ================= HEADER ================= */
 .header {
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
 }
 
-.header .container {
+.navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 8%;
+  justify-content: space-between;
+  min-height: 70px;
 }
 
-.logo {
-  height: 80px;
+.logo img {
+  height: 50px;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
+  align-items: center;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #333;
+  font-size: 16px;
   font-weight: 500;
-  transition: color 0.3s;
+  color: #333;
 }
 
 .nav-links a:hover {
@@ -49,176 +106,257 @@ body {
 }
 
 .admin-link {
-  color: #fff !important;
-  background: #b71c1c;
+  background-color: #b71c1c;
+  color: #fff;
   padding: 8px 14px;
   border-radius: 6px;
 }
 
-/* Hero */
+
+/* ================= HERO ================= */
 .hero {
+  background-color: #fff5f5;
+}
+
+.hero-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 8%;
-  background: #fff8f6;
+  gap: 40px;
 }
 
 .hero-content {
-  max-width: 50%;
+  flex: 1;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 span {
   color: #b71c1c;
 }
 
-.hero h1 span {
-  color: #000;
-}
-
-.hero p {
-  margin: 15px 0;
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
   color: #555;
 }
 
+.hero-image {
+  flex: 1;
+}
+
+
+/* ================= BUTTONS ================= */
 .btn-primary {
   display: inline-block;
-  background: #b71c1c;
+  background-color: #b71c1c;
   color: #fff;
-  padding: 10px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .btn-primary:hover {
-  background: #d32f2f;
+  background-color: #9c1515;
 }
 
-.hero-image img {
-  max-width: 500px;
-  border-radius: 12px;
-}
 
-/* About */
+/* ================= ABOUT ================= */
 .about {
-  padding: 60px 8%;
+  background-color: #fff;
   text-align: center;
 }
 
-/* Branches */
+.about p {
+  max-width: 800px;
+  margin: 15px auto 0;
+  color: #555;
+}
+
+
+/* ================= BRANCHES ================= */
 .branches {
-  padding: 60px 8%;
-  background: #fff8f6;
+  background-color: #fafafa;
 }
 
 .branch-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
   margin-top: 30px;
 }
 
 .branch-card {
-  background: #fff;
-  border-radius: 12px;
+  background-color: #fff;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .branch-card:hover {
   transform: translateY(-5px);
 }
 
-.branch-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
 .branch-card h3 {
-  margin: 10px;
-  color: #b71c1c;
+  margin: 15px 0 5px;
 }
 
-/* Gallery */
-.gallery {
-  padding: 60px 8%;
+.branch-card p {
+  padding: 0 15px 20px;
+  font-size: 14px;
+  color: #666;
 }
 
+
+/* ================= GALLERY ================= */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .gallery-grid img {
-  width: 100%;
-  border-radius: 10px;
-  transition: 0.3s;
+  border-radius: 8px;
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.05);
-}
 
-/* Contact */
+/* ================= CONTACT ================= */
 .contact {
-  padding: 60px 8%;
-  background: #fff8f6;
+  background-color: #fff5f5;
 }
 
 .contact-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
-.contact-info {
-  flex: 1;
-  min-width: 250px;
-}
-
-.contact-form {
-  flex: 1;
-  min-width: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.contact-info p {
+  margin-bottom: 10px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
   border-radius: 6px;
-  font-size: 1rem;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-/* Footer */
+
+/* ================= FOOTER ================= */
 .footer {
-  background: #b71c1c;
+  background-color: #111;
   color: #fff;
   text-align: center;
-  padding: 15px 0;
+  padding: 20px 0;
 }
 
-/* whatsapp fab */
-.whatsapp-fab{position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;padding:0.75rem 0.9rem;border-radius:50%;text-decoration:none;font-size:1.2rem;box-shadow:0 8px 20px rgba(0,0,0,0.2)}
+.footer p {
+  font-size: 14px;
+}
 
 
-/* Responsive */
+/* ================= WHATSAPP ================= */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  font-size: 24px;
+  padding: 14px;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  .hero {
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .hero-wrapper {
     flex-direction: column;
     text-align: center;
   }
-  .hero-content {
-    max-width: 100%;
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .branch-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }
+
+
+/* ================= HAMBURGER MENU ================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 15px;
+  }
+}
+
